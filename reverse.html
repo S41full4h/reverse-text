@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse the Text</title>
+
+<style>
+    input
+    {
+        height: 3rem;
+        width: 26rem;
+        margin-left: 250px;
+    }
+    #resulttext
+    {
+        margin-left: 24px;
+    }
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;">Reverse your Text in on the Spot</h1><br>
+
+           <!-- input field one -->
+    <input type="text" id="inputtext" placeholder="enter the text to reverse" onkeyup="reverse()">
+
+                <!-- input field second -->
+    <input type="text" id="resulttext" placeholder="your reversed text">
+</body>
+
+<script>
+    function reverse(){
+            // taking value from first field
+        var texttaken = document.getElementById("inputtext").value;
+
+            // creating empty variable
+        var empstr = " ";
+
+            // with the help of ofr reading the values of first field in reverse
+        for (var i = texttaken.length - 1; i>=0; i--){
+            // i = texttaken.length " - 1 " because arrayb starts from zero
+            empstr+=texttaken[i];
+        }
+
+        //inserting the value in second field whose id is "resulttext" from empstr
+        document.getElementById("resulttext").value = empstr;
+    }
+</script>
+</html>
